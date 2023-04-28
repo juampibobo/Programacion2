@@ -14,4 +14,3 @@ echo "La suma de (num1 + num2 + num3) dividido 3  es:  $resul";
 
 
 ?>
-
