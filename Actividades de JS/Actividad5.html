@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Insertar números hasta 5 veces</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+	<h1>Insertar números hasta 5 veces</h1>
+	<p>Introduce un número:</p>
+	<input type="number" id="numero" placeholder="Número">
+	<button onclick="insertarNumero()">Insertar</button>
+
+	<script>
+		var contador = 0;
+		var ultimoNumero;
+
+		function insertarNumero() {
+			
+			var num = parseInt(document.getElementById("numero").value);
+
+			
+			contador++;
+
+			
+			if (contador <= 5) {
+				document.getElementById("numero").value = "";
+				document.getElementById("numero").focus();
+				ultimoNumero = num;
+				alert("Número " + contador + " introducido");
+			}
+			
+			
+			if (contador > 5) {
+				document.getElementById("numero").disabled = true;
+				document.getElementsByTagName("button")[0].disabled = true;
+				alert("Fin del Programa\nContador ya no es menor a 5\nÚltimo número introducido: " + ultimoNumero);
+			}
+		}
+	</script>
+</body>
+</html>
